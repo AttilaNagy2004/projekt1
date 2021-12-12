@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="521" Width="640">
     <Grid>
+        <Label Content="Feladatok listája" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Height="31" Width="111"/>
+        <ListBox Margin="10,58,319,284"/>
+        <Label Content="Törölt elemek" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <ListBox Margin="10,272,319,69"/>
+        <Label Content="Feladat szövege:&#xD;&#xA;" HorizontalAlignment="Left" Margin="360,24,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="360,66,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="25"/>
+        <Button Content="Új hozzáadása" HorizontalAlignment="Left" Margin="360,96,0,0" VerticalAlignment="Top" Width="211" Height="30"/>
+        <Button Content="Kijelölt feladat módosítása" Margin="360,131,68,345"/>
+        <Button Content="Kijelölt feladat törlése" HorizontalAlignment="Left" Margin="360,169,0,0" VerticalAlignment="Top" Height="32" Width="211"/>
+        <Button Content="Kijelölt feladat visszaállít" HorizontalAlignment="Left" Margin="360,272,0,0" VerticalAlignment="Top" Width="211" Height="35"/>
+        <Button Content="Kijelölt feladat végleg törlése" HorizontalAlignment="Left" Margin="360,312,0,0" VerticalAlignment="Top" Height="33" Width="211"/>
 
     </Grid>
 </Window>

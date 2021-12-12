@@ -5,19 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="521" Width="640">
-    <Grid>
-        <Label Content="Feladatok listája" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Height="31" Width="111"/>
-        <ListBox Margin="10,58,319,284"/>
-        <Label Content="Törölt elemek" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-        <ListBox Margin="10,272,319,69"/>
-        <Label Content="Feladat szövege:&#xD;&#xA;" HorizontalAlignment="Left" Margin="360,24,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="360,66,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="25"/>
-        <Button Content="Új hozzáadása" HorizontalAlignment="Left" Margin="360,96,0,0" VerticalAlignment="Top" Width="211" Height="30"/>
-        <Button Content="Kijelölt feladat módosítása" Margin="360,131,68,345"/>
-        <Button Content="Kijelölt feladat törlése" HorizontalAlignment="Left" Margin="360,169,0,0" VerticalAlignment="Top" Height="32" Width="211"/>
-        <Button Content="Kijelölt feladat visszaállít" HorizontalAlignment="Left" Margin="360,272,0,0" VerticalAlignment="Top" Width="211" Height="35"/>
-        <Button Content="Kijelölt feladat végleg törlése" HorizontalAlignment="Left" Margin="360,312,0,0" VerticalAlignment="Top" Height="33" Width="211"/>
+        Title="MainWindow" Height="525" Width="639">
+    <Grid Margin="0,0,0,11">
+        <Label x:Name="feladatoklistaja" Content="Feladatok listája" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Height="31" Width="111"/>
+        <ListBox x:Name="lista" Margin="10,58,319,284">
+            <CheckBox x:Name="feladat1" Content="CheckBox" Height="20" Width="112" IsChecked="True" Checked="feladatbe_Checked"/>
+            <CheckBox x:Name="feladat2" Content="CheckBox" Unchecked="feladat2_Unchecked"/>
+        </ListBox>
+        <Label x:Name="töröltelemek" Content="Törölt elemek" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <ListBox x:Name="kuka" Margin="10,262,319,79"/>
+        <Label x:Name="szoveg" Content="Feladat szövege:&#xD;&#xA;" HorizontalAlignment="Left" Margin="360,24,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="szoveg1" HorizontalAlignment="Left" Margin="360,66,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="25"/>
+        <Button x:Name="ujhozzaad" Content="Új hozzáadása" HorizontalAlignment="Left" Margin="360,96,0,0" VerticalAlignment="Top" Width="211" Height="30" IsCancel="True" Click="ujhozzaad_Click"/>
+        <Button x:Name="kijeloltrorol" Content="Kijelölt feladat törlése" HorizontalAlignment="Left" Margin="360,169,0,0" VerticalAlignment="Top" Height="32" Width="211" Click="kijeloltrorol_Click"/>
+        <Button x:Name="kijeloltvissza" Content="Kijelölt feladat visszaállít" HorizontalAlignment="Left" Margin="360,262,0,0" VerticalAlignment="Top" Width="211" Height="35"/>
+        <Button x:Name="kijelolttorolvegleg" Content="Kijelölt feladat végleg törlése" HorizontalAlignment="Left" Margin="360,302,0,0" VerticalAlignment="Top" Height="33" Width="211"/>
+        <Button Content="Kijelölt feladat módosítása" HorizontalAlignment="Left" Margin="360,131,0,0" VerticalAlignment="Top" Width="211" Height="33"/>
 
     </Grid>
 </Window>

@@ -24,5 +24,36 @@ namespace Projekt1
         {
             InitializeComponent();
         }
+
+        private void ujhozzaad_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox kijelolt = new CheckBox();
+            kijelolt.Checked += new RoutedEventHandler(feladatbe_Checked);
+            kijelolt.Unchecked += new RoutedEventHandler(feladat2_Unchecked);
+            kijelolt.Content = szoveg1.Text;
+            lista.Items.Add(kijelolt);
+            szoveg1.Clear();
+        }
+
+        private void feladatbe(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void feladatbe_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox feladat1 = (CheckBox)sender;
+            feladat1.FontStyle = FontStyles.Italic;
+            feladat1.Foreground = Brushes.Gray;
+        }
+
+        private void feladat2_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox feladat2 = (CheckBox)sender;
+            feladat2.FontStyle = FontStyles.Normal;
+            feladat2.Foreground = Brushes.Black;
+        }
+
+
     }
 }

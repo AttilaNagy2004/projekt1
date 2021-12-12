@@ -54,6 +54,24 @@ namespace Projekt1
             feladat2.Foreground = Brushes.Black;
         }
 
+        private void kijeloltrorol_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox feladat2 = (CheckBox)lista.SelectedItem;
+            lista.Items.Remove(feladat2);
+            kuka.Items.Add(feladat2);
+        }
 
+        private void kijeloltvissza_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox kukavissza = (CheckBox)kuka.SelectedItem;
+            kuka.Items.Remove(kukavissza);
+            lista.Items.Add(kukavissza);
+        }
+
+        private void kijelolttorolvegleg_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox delete = (CheckBox)kuka.SelectedItem;
+            kuka.Items.Remove(delete);
+        }
     }
 }

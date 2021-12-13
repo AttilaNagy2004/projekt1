@@ -23,7 +23,20 @@ namespace Projekt1
         public MainWindow()
         {
             InitializeComponent();
+            if (System.IO.File.Exists("text.txt"))
+            {
+                string xaml = System.IO.File.ReadAllText("text.txt");
+                object content = System.Windows.Markup.XamlReader.Parse(xaml);
+                this.Content = content;
+            }
+    }
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            string xaml = System.Windows.Markup.XamlWriter.Save(this.Content);
+            System.IO.File.WriteAllText("text.txt", xaml);
         }
+
 
         private void ujhozzaad_Click(object sender, RoutedEventArgs e)
         {
@@ -73,5 +86,6 @@ namespace Projekt1
             CheckBox delete = (CheckBox)kuka.SelectedItem;
             kuka.Items.Remove(delete);
         }
+
     }
 }

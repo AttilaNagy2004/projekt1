@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="525" Width="639">
+        Title="MainWindow" Height="525" Width="639" Closing="MainWindow1_Closing" Activated="MainWindow1_Activated">
     <Grid Margin="0,0,0,11">
         <Label x:Name="feladatoklistaja" Content="Feladatok listája" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Height="31" Width="111"/>
         <ListBox x:Name="lista" Margin="10,58,319,284"/>
